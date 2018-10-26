@@ -752,7 +752,7 @@ declare class $npm$firebase$storage$UploadTask extends Promise<
     event: $npm$firebase$storage$TaskEvent,
     observerOrNext: | $npm$firebase$storage$Observer
     | ((snapshot: $npm$firebase$storage$UploadTaskSnapshot) => void),
-    onError?: (error: Error) => void,
+    onError?: (error: Error & {code: string}) => void,
     onComplete?: () => void
   ): $npm$firebase$storage$Unsubscribe;
   pause(): boolean;
@@ -901,6 +901,8 @@ declare module '@firebase/storage' {
     SettableMetadata: typeof $npm$firebase$storage$SettableMetadata,
     UploadMetadata: typeof $npm$firebase$storage$UploadMetadata,
     UploadTask: typeof $npm$firebase$storage$UploadTask,
-    UploadTaskSnapshot: typeof $npm$firebase$storage$UploadTaskSnapshot
+    UploadTaskSnapshot: typeof $npm$firebase$storage$UploadTaskSnapshot,
+    TaskEvent: *,
+    TaskState: *
   };
 }
