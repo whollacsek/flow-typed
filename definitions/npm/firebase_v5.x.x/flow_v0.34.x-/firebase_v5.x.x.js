@@ -570,6 +570,9 @@ declare class $npm$firebase$firestore$FieldPath {
 declare interface $npm$firebase$firestore$FieldValue {
   delete(): $npm$firebase$firestore$FieldValue;
   serverTimestamp(): $npm$firebase$firestore$FieldValue;
+  arrayRemove(...args: Array<any>): $npm$firebase$firestore$FieldValue;
+  arrayUnion(...args: Array<any>): $npm$firebase$firestore$FieldValue;
+  isEqual($npm$firebase$firestore$FieldValue): $npm$firebase$firestore$FieldValue;
 }
 
 declare type $npm$firebase$firestore$FirestoreError =
